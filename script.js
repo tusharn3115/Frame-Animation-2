@@ -192,8 +192,25 @@ function startAnimation(){
 
 
 
+preloadImages();
+
+
 window.addEventListener("resize", function(){
     loadImage(Math.floor(frames.currentIndex));
 })
 
-preloadImages();
+
+
+// text fade in out animation
+document.querySelectorAll(".headings h3")
+.forEach(function(elem){
+    gsap.from(elem, {
+        scrollTrigger:{
+            trigger: elem,
+            start: "top 90%",
+            end: "end 20%",
+            scrub: 2,
+        },
+        opacity: 0.3
+    })
+})
