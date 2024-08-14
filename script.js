@@ -76,17 +76,85 @@ function startAnimation(){
         }
     }
 
+
+    // first 50 frames tk first text chalega and second text ayega
     tl
-    .to(frames, updateFrame(50), "first")
+    .to(frames, updateFrame(100), "first")
     .to(".animate1", {
         opacity: 0,
         ease: "linear",
     }, "first") 
 
-    .to(frames, updateFrame(80), "second")
-    .to(".animate2")
-}
 
+    // after that 50 frames ke badh first text opacity 0 and next 80 frames tk second text chalega 
+    .to(frames, updateFrame(190), "second")
+    .to(".animate2", {
+        opacity: 1,
+        ease: "linear",
+    }, "second")
+
+    .to(frames, updateFrame(270), "third")
+    .to(".animate2", {
+        opacity: 1,
+        ease: "linear",
+    }, "third")
+
+
+    .to(frames, updateFrame(350), "fourth")
+    .to(".animate2", {
+        opacity: 0,
+        ease: "linear",
+    }, "fourth")
+
+
+    .to(frames, updateFrame(420), "fifth")
+    .to(".animate3", {
+        opacity: 1,
+        ease: "linear",
+    }, "fifth")
+
+
+    .to(frames, updateFrame(490), "sixth")
+    .to(".animate3", {
+        opacity: 1,
+        ease: "linear",
+    }, "sixth")
+
+
+    .to(frames, updateFrame(575), "seventh")
+    .to(".animate3", {
+        opacity: 0,
+        ease: "linear",
+    }, "seventh")
+
+
+    .to(frames, updateFrame(659), "eight")
+    .to(".panel", {
+        x: "0%",
+        ease: "expo",
+    }, "eight")
+
+
+    .to(frames, updateFrame(730), "ninth")
+    .to(".panel", {
+        x: "0%",
+        ease: "expo",
+    }, "ninth")
+
+
+    .to(frames, updateFrame(755), "tenth")
+    .to(".panel", {
+        opacity: 0,
+        ease: "linear",
+    }, "tenth")
+
+
+    .to(frames, updateFrame(850), "eleventh")
+    .to("canvas", {
+        scale: 0.5,
+        ease: "linear",
+    }, "eleventh")
+}
 
 
 
