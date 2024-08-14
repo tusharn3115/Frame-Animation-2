@@ -154,6 +154,40 @@ function startAnimation(){
         scale: 0.5,
         ease: "linear",
     }, "eleventh")
+
+
+    .to(frames, updateFrame(900), "twelvth")
+    .to(".panelizm", {
+        opacity: 1,
+        ease: "expo",
+    }, "twelvth")
+
+
+    .to(frames, updateFrame(1035), "twelvth")
+    .to(".panelizm span", {
+        width: 200,
+        ease: "expo",
+    }, "twelvth")
+
+
+    .to(frames, updateFrame(1120), "thirteen")
+    .to("canvas", {
+        scale: 1,
+        ease: "linear",
+    }, "thirteen")
+
+
+    .to(frames, updateFrame(1200), "fourteen")
+    .to(".panelizm", {
+        scale: 2,
+        ease: "circ",
+    }, "fourteen")
+
+    .to(frames, updateFrame(1343), "fifteen")
+    .to(".panelizm", {
+        scale: 2,
+        ease: "circ",
+    }, "fifteen")
 }
 
 
